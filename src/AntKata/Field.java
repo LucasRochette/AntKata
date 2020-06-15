@@ -38,6 +38,7 @@ public class Field extends JPanel {
                 try {
                     image.setRGB(e.getX(), e.getY(), Color.green.getRGB());
                     // TODO
+                    food.add(new Food(e.getX(), e.getY()));
                     repaint();
                 } catch (Exception exception) {
                     System.out.println("Invalid click");
@@ -83,7 +84,7 @@ public class Field extends JPanel {
 
     private void initColonyAndFood() {
         // TODO
-        this.c = new Colony(0, new Point(this.widthX / 2, this.heightX / 2));
+        this.c = new Colony(50, new Point(this.widthX / 2, this.heightX / 2));
         this.food = new ArrayList<>();
     }
 

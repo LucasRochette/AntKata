@@ -4,22 +4,22 @@ import java.awt.*;
 
 public class Food {
     private Point position;
-    // TODO Attributs à rajouter pour gérer le cycle de vie
+    private int lifetime;
 
     public Point getPosition() {
         return position;
     }
 
     public Food(int x, int y) {
-        // TODO
+        this.position = new Point(x, y);
+        this.lifetime = 60000;
     }
 
     public boolean isAlive() {
-        // TODO
-        return true;
+        return this.lifetime > 0;
     }
 
     public void nextTurn() {
-        // TODO
+        this.lifetime --;
     }
 }
